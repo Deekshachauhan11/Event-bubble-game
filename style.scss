@@ -2,31 +2,81 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 html,
 body {
   height: 100%;
   width: 100%;
 }
-
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+}
 main {
   width: 100%;
   height: 100%;
   background-color: rgb(138, 185, 159);
-  display: flex;
+  @include flexCenter();
   justify-content: center;
-  align-items: center;
+
   .panel {
     width: 80%;
     height: 80%;
-    background-color: rgb(218, 218, 218);
+    background-color: rgb(255, 255, 255);
     overflow: hidden;
     border-radius: 10px;
 
-    .top-panel{
-        width: 100%;
-        height: 100px;
-        background-color: rgb(7, 86, 7);
+    .top-panel {
+      @include flexCenter();
+      justify-content: space-between;
+      width: 100%;
+      height: 100px;
+      background-color: rgb(47, 71, 47);
+      padding: 0px 22%;
+      color: #fff;
+
+      .elem {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        letter-spacing: 0.7px;
+        .box {
+          padding: 10px 20px;
+          background-color: white;
+          border-radius: 5px;
+          color: green;
+          font-size: 1.3rem;
+          font-weight: 600;
+        }
+      }
     }
+
+
+    .bottom-panel{
+        width: 100%;
+        height: calc(100% - 100px);
+        color: #fff;
+        padding: 1rem;
+        display: flex;
+        gap: 0.7rem;
+        flex-wrap: wrap;
+
+        .bubble{
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background-color: rgb(57, 94, 57);
+            @include flexCenter();
+            justify-content: center;
+        }
+        .bubble:hover{
+            background-color: rgb(31, 43, 31);
+            cursor: pointer;
+        }
+    }
+
   }
 }
+
+
