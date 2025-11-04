@@ -53,9 +53,10 @@ main .panel .top-panel .elem .box {
 main .panel .bottom-panel {
   width: 100%;
   height: calc(100% - 100px);
-  color: #fff;
   padding: 1rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.7rem;
   flex-wrap: wrap;
 }
@@ -67,6 +68,7 @@ main .panel .bottom-panel .bubble {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #fff;
 }
 main .panel .bottom-panel .bubble:hover {
   background-color: rgb(31, 43, 31);
